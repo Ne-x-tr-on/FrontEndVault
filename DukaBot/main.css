@@ -1,0 +1,503 @@
+/* @import url("/assets/style.css");
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+html {
+  font-size: 100%; 
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.wrapper{
+  width: 100%;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(135deg,#112321,#030303);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+@media (min-width: 768px) {
+  .nav { flex-direction: row; }
+}
+
+@media (min-width: 1024px) { 
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+ */
+
+
+ /* main.css */
+/*  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sidebar-width: 250px;
+  --header-height: 60px;
+  --primary-color: #112321;
+  --secondary-color: #030303;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--header-height) 1fr;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.header {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+.search-form {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+}
+
+.sidebar {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  min-height: 200px;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    transition: left 0.3s ease;
+    z-index: 100;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .menu-toggle {
+    order: 0;
+  }
+
+  .search-form {
+    order: 3;
+    flex: 1 0 100%;
+  }
+
+  .date-picker {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .date-picker input {
+    width: 140px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 50px;
+  }
+
+  .date-picker input {
+    width: 120px;
+  }
+
+  .main-nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+} */
+
+
+
+/* main.css */
+:root {
+  /* New Color Palette */
+  --primary-color: #4361ee;    /* Vibrant blue */
+  --secondary-color: #f8f9fa;  /* Light gray */
+  --accent-color: #4cc9f0;     /* Cyan */
+  --text-color: #2b2d42;       /* Dark blue-gray */
+  --success-color: #06d6a0;    /* Teal */
+  --warning-color: #ffd166;    /* Yellow */
+  --danger-color: #ef476f;     /* Coral */
+  --background-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  
+  /* Border */
+  --border-radius: 8px;
+  --border-color: #dee2e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-color);
+  background: var(--background-gradient);
+  line-height: 1.6;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Layout */
+.wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 70px 1fr;
+  min-height: 100vh;
+}
+
+.header {
+  grid-column: 1 / -1;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-sm);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Search Form */
+.search-form {
+  flex: 1;
+  max-width: 600px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+/* Date Picker */
+.date-picker input {
+  padding: var(--spacing-xs);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: white;
+}
+
+/* Sidebar */
+.sidebar {
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-md);
+  overflow-y: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.main-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.main-nav a i {
+  width: 24px;
+  text-align: center;
+}
+
+/* Main Content */
+.main-content {
+  padding: var(--spacing-lg);
+  background: var(--secondary-color);
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 240px;
+    height: calc(100vh - 70px);
+    transition: left 0.3s ease;
+    z-index: 90;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .menu-toggle {
+    order: 0;
+  }
+
+  .search-form {
+    order: 3;
+    flex: 1 0 100%;
+  }
+
+  .date-picker {
+    order: 2;
+  }
+
+  .main-content {
+    padding: var(--spacing-md);
+  }
+
+  .card {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: var(--spacing-xs);
+  }
+
+  .date-picker input {
+    width: 100%;
+  }
+
+  .main-nav a {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
+
+/* Interactive Elements */
+button, .button {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background: #3650c7;
+  transform: translateY(-1px);
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.4s ease-out;
+}

@@ -3,5 +3,5 @@ const menuLinks = document.querySelector('.navbar_menu');
 
 menu.addEventListener('click',()=>{
   menu.classList.toggle('is-active');
-  menuLinks.classList('active');
+  menuLinks.classList.toggle('active');
 });

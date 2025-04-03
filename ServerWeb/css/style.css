@@ -2,6 +2,9 @@
 
 :root{
   --primary-color: #047aed;
+  --secondary-color:#1c3fa8;
+  --light-color:#f4f4f4;
+  --dark-color:#002240;
   --box-shadow:rgba(0,0,0,0.2);
 }
 
@@ -125,7 +128,7 @@ img{
   margin:0 auto;
 }
 
-.stas .grid h3{
+.stats .grid h3{
   font-size:35px;
 }
 
@@ -142,4 +145,97 @@ img{
 .cli .grid > *:first-child{
   grid-column:1/span 2;
   grid-row:1/span 2;
+}
+
+/* Cloud */
+.cloud .grid{
+  grid-template-columns: 4fr 3fr;
+}
+
+.languages .flex{
+  flex-wrap: wrap;
+}
+
+.languages .card h4{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.languages .card:hover{
+  transform:translateY(-15px);
+}
+
+.languages .card{
+  text-align: center;
+  margin:18px 10px 40px;
+  transition: transform 2s ease-in;
+}
+
+/* Footer */
+.footer.social a{
+  margin:0 20px;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social a:hover {
+  color: #007bff;
+}
+
+
+/* Tablets */
+@media(max-width:768px){
+.grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1f;
+}
+.showcase{
+  height:auto;
+}
+
+.showcase-text{
+  text-align: center;
+  margin-top: 40px;
+}
+.showcase-form{
+  justify-self:center;
+  margin:auto;
+}
+
+.cli .grid > *:first-child{
+  grid-column:1;
+  grid-row:1;
+}
+
+}
+
+
+
+
+
+
+
+
+/* Mobile */
+@media(max-width:500px){
+  .navbar{
+    height: 110px;
+  }
+
+  .navbar .flex{
+    flex-direction: column;
+  }
+  
+  .navbar ul{
+    padding:10px;
+    background-color:rgba(0,0,0,0.2);
+  }
 }
